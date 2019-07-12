@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>
+            Time table
+        </title>
+        <script type="text/javascript" src="timestable.js">
+        </script>
+        <style>
+            .input{
+                margin-top: 10px;
+                width: 100px;
+                height: 30px;
+                font-size: 20px;
+            }
+            fieldset{
+                margin: 30%;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+            label{
+                font-size: 20px;
+                align: center;
+            }
+        </style>
+    </head>
+    <body align="center">
+<form> 
+    <table>
+    <label>Name:</label><input type="text" name="name" id="name" placeholder="Name"class="input"width="100px"/><br>
+    <label>Skills</label><select id="skill" onchange="" class="input">
+            <option value="">-select-</option>
+        <option value="Tamil">Tamil</option>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Che">Che</option>
+        <option value="Bio">Bio</option>
+        </select><br/>
+    <fieldset><legend>Subjects</legend>
+    <label>Class:</label><select id="class" onchange=""class="input"/>
+            <option value="">-select-</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    </select><br/>
+    <label>Subjects:</label><select id="sub" onchange=""class="input">
+        <option value="">-select-</option>
+    <option value="Tamil">Tamil</option>
+    <option value="English">English</option>
+    <option value="Maths">Maths</option>
+    <option value="Che">Che</option>
+    <option value="Bio">Bio</option>
+    </select><br/>
+    <label>Timeslot:</label><select id="time" onchange=""class="input">
+            <option value="">-select-</option>
+            <option value="9 to 10">9 to 10</option>
+            <option value="10 to 11">10 to 11</option>
+            <option value="11 to 12">11 to 12</option>
+            <option value="1 to 2">1 to 2</option>
+            <option value="2 to 3">2 to 3</option><br/>
+            </select><br/>
+            <input type="button" id="submit" onclick="save()" value="submit"class="input"/><br/>
+            <input type="button" id="submit" onclick="display()" value="display" class="input"/>
+            <br/>
+            </fieldset>
+            <fieldset><legend>Display</legend>
+                class:<select id="class" onchange=""class="input">
+                        <option value="">-select-</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        </select>
+            </fieldset>
+
+</table>
+</form>
+<div id="msg">
+</div>
+</body>
+</html>
