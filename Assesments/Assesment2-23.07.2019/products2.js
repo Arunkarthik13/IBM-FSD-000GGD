@@ -21,6 +21,7 @@ const addtocart=(name,price)=>
                 price : price
             })
     })
+}
     
 const dropdown=((user)=>
 {  
@@ -71,6 +72,6 @@ cd=`<select id="view">`
         document.getElementById('abc').innerHTML=pro;        
     });
     });
-}
+
     
     
