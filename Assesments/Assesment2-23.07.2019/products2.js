@@ -138,9 +138,3 @@ cd=`<select id="view">`
                         </table>`
         document.getElementById('use').innerHTML = _table;
     }
-   
-    const minus=((m)=>
-    {
-        data=data-1;
-        document.getElementById('qua').innerHTML=data;
-    });
