@@ -17,9 +17,7 @@
             rows += `<tr>
                         <td>${u.name}</td>
                         <td>${u.price}</td>
-                        <td><button onclick="minus(${u.quantity})">-</button>
-                        <span id="quantity">${u.quantity}</span>
-                        <button onclick="plus(${u.quantity})">+</button></td>
+                        <td>${u.quantity}</td>
                         <td>${total}</td>
                     </tr>`
         });
@@ -37,17 +35,17 @@
         document.getElementById('cart_div').innerHTML = _table;
     }
 
-const minus = (data) => {
-    console.log(data)
-    data=data-1;
-    document.getElementById('quantity').value = data;
-}
+// const minus = (data) => {
+//     console.log(data)
+//     data=data-1;
+//     document.getElementById('quantity').value = data;
+// }
 
-const plus = (data) =>{
-    console.log(data)
-    data=data+1;
-    document.getElementById('quantity').value = data;
-}
+// const plus = (data) =>{
+//     console.log(data)
+//     data=data+1;
+//     document.getElementById('quantity').value = data;
+// }
         </script>
     </head>
     <body onload="getdata()">
