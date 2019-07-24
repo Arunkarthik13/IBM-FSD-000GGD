@@ -8,8 +8,8 @@ const cartroutes = require('./carts').cartroutes;
 server.use(parser.json());
 // apply cors
 server.use(cors());
-server.use('/products','userroutes');
-server.use('/cart','cartroutes');
+server.use('/products',userroutes);
+server.use('/cart',cartroutes);
 const port=7100;
 server.listen(port,()=>
 {
