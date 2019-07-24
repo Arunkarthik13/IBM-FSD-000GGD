@@ -7,6 +7,7 @@
         fetch(_url1,{})
         .then(res=>res.json())
         .then(cart=>{
+            console.log(cart);
             createTable(cart);
         })
     }
@@ -49,7 +50,7 @@
         </script>
     </head>
     <body onload="getdata()">
-    <div align="center" id="cart-div"></div>
+    <div id="cart_div"></div>
     <div id="table"></div>
     </body>
 </html>
