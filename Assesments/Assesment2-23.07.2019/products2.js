@@ -21,52 +21,6 @@ const addtocart=(name,price)=>
                 price : price
             })
     })
-    const getCart = ()=>{
-        const _url1 = 'http://localhost:1269/cart';
-        fetch(_url1,{})
-        .then(res=>res.json())
-        .then(cart=>{
-            createTable(cart);
-        })
-    }
-    const createTable = (data)=>{
-        let rows = '';
-        data.cart.forEach(u => {
-            total = u.price * u.quantity;
-            rows += `<tr>
-                        <td>${u.name}</td>
-                        <td>${u.price}</td>
-                        <td><button onclick="minus(${u.quantity})">-</button>
-                        <span id="quantity">${u.quantity}</span>
-                        <button onclick="plus(${u.quantity})">+</button></td>
-                        <td>${total}</td>
-                    </tr>`
-        });
-        const _table = `<table>
-                            <tr>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                            </tr>
-                            ${rows}
-                        </table>`;
-        
-        
-        document.getElementById('cart_div').innerHTML = _table;
-    }
-}
-const minus = (data) => {
-    console.log(data)
-    data=data-1;
-    document.getElementById('quantity').value = data;
-}
-
-const plus = (data) =>{
-    console.log(data)
-    data=data+1;
-    document.getElementById('quantity').value = data;
-}
 
 const dropdown=((user)=>
 {  
