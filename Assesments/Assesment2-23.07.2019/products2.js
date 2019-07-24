@@ -21,7 +21,7 @@ const addtocart=(name,price)=>
                 price : price
             })
     })
-
+    
 const dropdown=((user)=>
 {  
 
@@ -71,24 +71,6 @@ cd=`<select id="view">`
         document.getElementById('abc').innerHTML=pro;        
     });
     });
+}
     
-    const createTable = (data)=>{
-        let rows = '';
-        data.users.forEach(u => {
-            rows += `<tr>
-                        <td>${u.name}</td>
-                        <td><input type="button" value="+" onclick="minus(${quantity})"></td>
-                        <span id="qua">${u.quantity}</span>
-                        <td>${u.price}</td>
-                    </tr>`
-        });
-        const _table = `<table>
-                            <tr>
-                                <th>Name</th>
-                                <th>Quanity</th>
-                                <th>Price</th>
-                            </tr>
-                            ${rows}
-                        </table>`
-        document.getElementById('use').innerHTML = _table;
-    }
+    
