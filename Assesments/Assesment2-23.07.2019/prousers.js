@@ -9,4 +9,9 @@ router.get('/',(req,res)=>
             products:p1.display()
          }));
 });
+router.post('/buy',(req,res)=>
+{
+  res.setHeader('content-type','application/json');
+       p1.buy(req.body)
+})
 module.exports.userroutes=router;

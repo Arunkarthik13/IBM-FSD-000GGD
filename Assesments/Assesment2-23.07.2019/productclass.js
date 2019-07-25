@@ -1,5 +1,7 @@
 const products=require('./products').products;
 const add1=require('./products').add1;
+const emai=require('./emailservice').emai;
+const ema=new emai();
 class prod
 {
     constructor(){
@@ -8,6 +10,17 @@ class prod
     display()
     {
         return this.products;
+    }
+    buy(u)
+    {
+        let userobj={
+       sub:"user registration",
+       body:`<div>Dear user ${u.name}</div>
+             <div>Thank you for ordering</div>`,
+       from:null,
+       to:u.email
+        }
+        ema.emailattachment(userobj);
     }
 }
 class adding

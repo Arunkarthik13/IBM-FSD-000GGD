@@ -1,0 +1,29 @@
+<html> 
+    <head>
+        <title>Buy</title>
+        <script type="text/javascript">
+        const buy=(()=>
+        {
+            url='http://localhost:7100/products/';
+            name=document.getElementById('name').value;
+            email=document.getElementById('email').value;
+            fetch(url+'/buy',{
+                method:'POST',
+                headers:{
+                     'content-type':'application/json'
+                },
+                body:JSON.stringify({
+                      name:name,
+                      email:email
+                })
+            });
+            
+        })
+        </script>
+    </head>
+    <body>
+        Name:<input type="text" id="name" placeholder=""/>
+        Email:<input type="text" id="email"/>   
+        <input type="button"id="buy" onclick="buy()"value="buy"/>
+    </body>
+</html>

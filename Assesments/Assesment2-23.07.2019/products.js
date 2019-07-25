@@ -21,5 +21,15 @@ products=[
     }
 ];
 add1=[];
+email={
+    smtp :
+    {
+      service:'gmail',
+      user: 'sraji.kum@gmail.com',
+
+      pass:'1Shiva3shakthy5'
+    }
+}
 module.exports.products=products;
 module.exports.add1=add1;
+module.exports.email=email;
