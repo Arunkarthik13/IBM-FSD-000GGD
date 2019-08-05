@@ -28,7 +28,6 @@ server.post('/verify',(req,res)=>
 
     userService.verifyuser(req.body.otp,(err,rs,time1)=>
     {
-        console.log(time1);
         if(err){
             res.status(402).json({
                 message : 'Unable to proceess the request',
@@ -39,14 +38,14 @@ server.post('/verify',(req,res)=>
             if(rs[0]==null)
             {
                 res.status(402).json({
-                    message : 'otp not verified ',
+                    message : ' Time is expired and otp is not verified',
                 });
             }
             else if(req.body.otp==rs[0].otp1&&rs[0].time>=time1)
             {
                res.status(200).json(
                 {
-                message : 'otp verified successfully',
+                message : 'Otp verified successfully Within the expire time',
                 
                 });
                // createpassword(req.body.otp,req.otp.pass(r,s));

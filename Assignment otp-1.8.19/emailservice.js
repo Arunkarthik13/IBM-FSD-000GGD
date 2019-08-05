@@ -51,10 +51,6 @@ class Service {
     addemail(_user,callback){
         // update password
         const otp1=this.generateotp();
-        var date=new Date();
-        var min=date.getMinutes()+30;
-        var time=date.getTime()+min;
-        console.log(time);
         let userobj={
             sub:"Welcome to IBM",
             body:`<div>Dear ${_user.name} your one time paasword to verify and for joining in IBM:${otp1}</div>
@@ -83,7 +79,10 @@ class Service {
                     console.log('Email sent');
                     return 'Email sent successfully';
                 }
-            } )      
+            } )  
+            var date=new Date();       
+        var time=date.getTime()+120000;    
+        console.log(time);
         const _url = UserConstants.mongo.url + UserConstants.mongo.port;
         client.connect(_url,(err,connection)=>{
             connection.db(UserConstants.mongo.db).collection(UserConstants.mongo.collections.user).insert({email:_user.email,name:_user.name,otp1,time},(err,response)=>{
