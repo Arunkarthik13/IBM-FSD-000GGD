@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <title>Tic Tac Toe</title>
+    <style>
+    table{
+        height: 200px;
+        width: 200px;
+        text-align: center;
+    }
+    td{
+        align-self: center;
+        height: 25%;
+        width: 25%;
+    }
+    button{
+        margin: 25px;
+        margin-left: 150px;
+        height: 25px;
+        width: 50px;
+    }
+    </style>
+    
+    <script>
+    let c_url = 'http://localhost:7100/game/tictactoe/add';
+    var number = 1;
+    const cell = (elem) =>{
+        var id = elem.id;
+        alert(id)
+        if(number == 1){
+            fetch(c_url,{
+                method : 'POST',
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify({
+                    cell_name : id,
+                    value : number,
+                    player : "p_1"
+                })
+            })
+            document.getElementById(id).innerHTML = "x";
+            document.getElementById(id).setAttribute("disabled","true");
+        }else{
+            document.getElementById(id).innerHTML = "0";
+            document.getElementById(id).setAttribute("disabled","true");
+            fetch(c_url,{
+                method : 'POST',
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify({
+                    cell_name : id,
+                    value : number,
+                    player : "p_2"
+                })
+            })
+        }
+        mouseClicked();
+    }
+
+    let mouseClicked = () => {
+        if(number== 1){
+            number = 0;
+        }
+        else{
+            number = 1;
+        }
+        console.log('mouseClick = ' + number);
+    }
+
+    const save = () =>{
+        alert('Save button clicked...')
+    }
+
+    </script>
+</head>
+<body>
+    <h1>TIC-TAC-TOE</h1>
+    <table border="5">
+        <tr>
+            <td id="cell1" onclick="cell(this)"></td>
+            <td id="cell2" onclick="cell(this)"></td>
+            <td id="cell3" onclick="cell(this)"></td>
+        </tr>
+        <tr>
+            <td id="cell4" onclick="cell(this)"></td>
+            <td id="cell5" onclick="cell(this)"></td>
+            <td id="cell6" onclick="cell(this)"></td>
+        </tr>
+        <tr>
+            <td id="cell7" onclick="cell(this)"></td>
+            <td id="cell8" onclick="cell(this)"></td>
+            <td id="cell9" onclick="cell(this)"></td>
+        </tr>
+    </table>
+    <button id="save" onclick="save()">Save</button>
+</body>
+</html>
