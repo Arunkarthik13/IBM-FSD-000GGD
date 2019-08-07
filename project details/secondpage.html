@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            My template
+        </title>
+            <style>
+               div 
+               {
+                 display: inline-block;
+                 width: 30%;
+                 height: 60%;
+                 border-block: 30%
+               }      
+            </style>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+                const loadTemplate=()=>{
+                    const _url = 'http://localhost:4777/template/add';
+                    fetch(_url,{})
+                            .then(res=>res.json())
+                            .then(temp=>{
+                                createTemp(temp);
+                            })
+                        }
+                const createTemp=((temp)=>{
+                    if(location.search)
+                    {
+                        var imgfile=location.search.substring(1);
+                temp.template.forEach((u)=>
+                {
+                    if(u.template==imgfile)
+                    {
+                        document.write('<IMG SRC="' + imgfile + '" class="rounded float-right">');
+                    }
+                })
+            }
+                });
+                  
+            </script>
+    </head>
+    <body onload="loadTemplate()">
+        <label>
+            <div id="img1">
+
+            </div>
+        </label>
+        <!-- <label>
+            <div id="img1">
+
+            </div>
+        </label>
+        <label>
+                <div id="img2">
+
+                </div>
+        </label>
+        <label>
+                <div id="img3">
+
+                </div>
+        </label>  -->
+    </body>  
+</html>

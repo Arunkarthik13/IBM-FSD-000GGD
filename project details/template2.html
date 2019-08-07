@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            My template
+        </title>
+            <style>
+               div 
+               {
+                 display: inline-block;
+                 width: 30%;
+                 height: 60%;
+                 border-block: 30%
+               }        
+            </style>
+            <script>
+             const loadTemplate=()=>{
+                    const _url = 'http://localhost:4777/template/add';
+                    fetch(_url,{})
+                            .then(res=>res.json())
+                            .then(temp=>{
+                                createTemp(temp);
+                            })
+                        }
+                const createTemp=(temp)=>{
+                let res1 = `<img src='${temp.template[0].template}'
+                onclick="document.location='secondpage.html?${temp.template[0].template}';"/>`;
+                document.getElementById('img1').innerHTML = res1;
+                let res2 = `<img src='${temp.template[1].template}'
+                onclick="window.location='secondpage.html?${temp.template[1].template}';"/>`;
+                document.getElementById('img2').innerHTML = res2;
+                let res3 = `<img src='${temp.template[2].template}'
+                onclick="window.location='secondpage.html?${temp.template[2].template}';"/>`;
+                document.getElementById('img3').innerHTML = res3;
+                    }
+                    </script>
+    </head>
+    <body>
+        <body onload="loadTemplate()">
+        <label>
+            <div id="img1">
+
+            </div>
+        </label>
+        <label>
+                <div id="img2">
+
+                </div>
+        </label>
+        <label>
+                <div id="img3">
+
+                </div>
+        </label> 
+    </body>  
+    <!-- // <body>
+    //    <div onClick="window.location = 'https://docs.google.com/document/d/1sXo_VrASabVBFR5wKRvlgVnfhPigpABQZXGfVTrwO8U/edit?usp=sharing';">
+    //         <label>
+             
+    //             <img src="template2.png">
+    //   </label> 
+    //     </div>
+    //     <div onClick="window.location = 'https://docs.google.com/document/d/18VoXH1MKA0EvW9mhR4srx1P0k3teG_LVYo7WtnDIWLs/edit?usp=sharing';">
+    //         <label>
+                
+    //             <img src="template7.png">
+    //   </label> 
+    //     </div>
+    //     <div onClick="window.location = 'https://docs.google.com/document/d/16PAoi6sOegcYztSuLzWYHELsHstEc867q-rziz9V5SE/edit?usp=sharing';">
+    //         <label>
+                
+    //             <img src="template8.png">
+    //   </label> 
+    //     </div>
+    // </body>   -->
+</html>
