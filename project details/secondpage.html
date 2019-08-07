@@ -3,6 +3,15 @@
         <title>
             My template
         </title>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
             <style>
                div 
                {
@@ -12,15 +21,7 @@
                  border-block: 30%
                }      
             </style>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-            <!-- jQuery library -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <!-- Popper JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-            <!-- Latest compiled JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+            
             <script type="text/javascript">
                 const loadTemplate=()=>{
                     const _url = 'http://localhost:4777/template/add';
@@ -38,7 +39,11 @@
                 {
                     if(u.template==imgfile)
                     {
-                        document.write('<IMG SRC="' + imgfile + '" class="rounded float-right">');
+                        
+                        var r=`<img src='${u.template}' style="margin-left:820%;margin-top:80%"  class="rounded float-left" alt="Paris"/>
+                               <input class="btn btn-primary" style="margin-left:940%;margin-bottom:500%"type="button" name="preview" value="preview"/>`
+                        document.getElementById('img1').innerHTML=r;
+                        //document.write('<img src="' + imgfile + '" class="rounded float-right">');
                     }
                 })
             }
@@ -48,10 +53,10 @@
     </head>
     <body onload="loadTemplate()">
         <label>
-            <div id="img1">
+            <div id="img1" align="center">
 
             </div>
-        </label>
+        </label> 
         <!-- <label>
             <div id="img1">
 
