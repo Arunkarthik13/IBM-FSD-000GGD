@@ -4,52 +4,78 @@
             My template
         </title>
             <style>
+                body, html
+                 {
+                 height: 100%;
+                  margin: 0;
+                }
+                img{
+                    border: rgb(218, 91, 123) solid 5px;
+                }
+                .pointer
+                {
+                   cursor: pointer;
+                }
+                h1
+                {
+                    color: rgba(236, 119, 24, 0.952);
+                    margin-top: 3%;
+                }
                div 
                {
-                 display: inline-block;
-                 width: 30%;
-                 height: 60%;
-                 border-block: 30%
+                   margin-top: 80px;
+                   margin-left: 50px;
+                   display: inline-block;
+                   width: 30%;
+                   height: 60%;
                }        
+               body{
+                   background-image: url("background5.jfif");
+               }
             </style>
             <script>
-             const loadTemplate=()=>{
+                 const loadTemplate=()=>
+                 {
                     const _url = 'http://localhost:4777/template/add';
                     fetch(_url,{})
                             .then(res=>res.json())
                             .then(temp=>{
                                 createTemp(temp);
                             })
-                        }
-                const createTemp=(temp)=>{
+                 }
+                const createTemp=(temp)=>
+                   {
+
                 let res1 = `<img src='${temp.template[0].template}'
-                onclick="document.location='secondpage.html?${temp.template[0].template}';"/>`;
+                onclick="document.location='secondpage.html?${temp.template[0].template}';" class="pointer"/>`;
                 document.getElementById('img1').innerHTML = res1;
+
                 let res2 = `<img src='${temp.template[1].template}'
-                onclick="window.location='secondpage.html?${temp.template[1].template}';"/>`;
+                onclick="window.location='secondpage.html?${temp.template[1].template}';" class="pointer"/>`;
                 document.getElementById('img2').innerHTML = res2;
+
                 let res3 = `<img src='${temp.template[2].template}'
-                onclick="window.location='secondpage.html?${temp.template[2].template}';"/>`;
+                onclick="window.location='secondpage.html?${temp.template[2].template}';" class="pointer"/>`;
                 document.getElementById('img3').innerHTML = res3;
                     }
-                    </script>
+            </script>
     </head>
     <body>
+        <h1 align="center"><b>Choose template</b></h1>
         <body onload="loadTemplate()">
         <label>
             <div id="img1">
-
             </div>
         </label>
-        <label>
-                <div id="img2">
 
-                </div>
+        <label>
+           <div id="img2">
+           </div>
         </label>
-        <label>
-                <div id="img3">
 
-                </div>
+        <label>
+           <div id="img3">
+            </div>
         </label> 
     </body>  
     <!-- // <body>

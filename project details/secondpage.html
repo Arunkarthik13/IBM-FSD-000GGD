@@ -20,9 +20,18 @@
                  height: 60%;
                  border-block: 30%
                }      
-            </style>
-            
+               img{
+                    border: rgb(218, 91, 123) solid 5px;
+                    margin-left:750%;
+                    margin-top:80%
+                }
+                .pointer
+                {
+                   cursor: pointer;
+                }
+            </style>    
             <script type="text/javascript">
+                //fetch details
                 const loadTemplate=()=>{
                     const _url = 'http://localhost:4777/template/add';
                     fetch(_url,{})
@@ -31,46 +40,33 @@
                                 createTemp(temp);
                             })
                         }
+
+                //Display the image
                 const createTemp=((temp)=>{
                     if(location.search)
                     {
                         var imgfile=location.search.substring(1);
-                temp.template.forEach((u)=>
-                {
-                    if(u.template==imgfile)
-                    {
-                        
-                        var r=`<img src='${u.template}' style="margin-left:820%;margin-top:80%"  class="rounded float-left" alt="Paris"/>
-                               <input class="btn btn-primary" style="margin-left:940%;margin-bottom:500%"type="button" name="preview" value="preview"/>`
-                        document.getElementById('img1').innerHTML=r;
-                        //document.write('<img src="' + imgfile + '" class="rounded float-right">');
+                        temp.template.forEach((u)=>
+                        {
+                            if(u.template==imgfile)
+                              {                        
+                                  var r=`<img src='${u.template}'/>
+                                  <input class="btn btn-primary" class="pointer" style="margin-left:860%;margin-bottom:500%"type="button" name="preview" value="preview"
+                                  onclick="document.location='thirdpage.html';"/>`
+                                  document.getElementById('img1').innerHTML=r;
+                              }
+                        })
                     }
-                })
-            }
                 });
                   
             </script>
     </head>
     <body onload="loadTemplate()">
+        
         <label>
-            <div id="img1" align="center">
-
+            <div id="img1">
             </div>
         </label> 
-        <!-- <label>
-            <div id="img1">
-
-            </div>
-        </label>
-        <label>
-                <div id="img2">
-
-                </div>
-        </label>
-        <label>
-                <div id="img3">
-
-                </div>
-        </label>  -->
+       
     </body>  
 </html>
