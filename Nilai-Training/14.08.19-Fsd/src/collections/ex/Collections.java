@@ -32,7 +32,10 @@ public Collections()throws InputMismatchException
 }
 public void displaycollection()
 {
-	//Iterator ite=new HashSet();
+	Iterator ite=set.iterator();
+	while(ite.hasNext()) {
+		System.out.println(ite.next().toString());
+	}
 }
 
 
