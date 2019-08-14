@@ -14,6 +14,7 @@ public Collections()throws InputMismatchException
 {
 	super();
 	System.out.println("number of elements in the array");
+	System.out.print("ABC");
 	str=new String[sc.nextInt()];
 	for(int i=0;i<str.length;i++)
 	{
@@ -31,7 +32,7 @@ public Collections()throws InputMismatchException
 }
 public void displaycollection()
 {
-	Iterator ite=new HashSet();
+	//Iterator ite=new HashSet();
 }
 
 
