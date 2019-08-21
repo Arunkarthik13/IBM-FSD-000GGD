@@ -37,5 +37,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	{
 		dao.getConnectionInfo();
 	}
+	public void Deletedata(int id) throws SQLException
+	{
+		dao.Deletedata(id);
+	}
 
 }

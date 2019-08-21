@@ -1,14 +1,13 @@
 package comm.example.dao;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mysql.jdbc.DatabaseMetaData;
 
 import comm.example.factory.MyConnectionFactory;
 import comm.example.model.Employee;
@@ -89,6 +88,15 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 
 		}
+	}
+
+
+
+	@Override
+	public void Deletedata(int id) throws SQLException {
+		pStatement=connection.prepareStatement("delete from employee where id=",+id);
+		pStatement.executeUpdate();
+		
 	}
 	
 }
