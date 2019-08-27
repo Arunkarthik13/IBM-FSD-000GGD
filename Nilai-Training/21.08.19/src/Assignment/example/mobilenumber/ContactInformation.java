@@ -39,18 +39,18 @@ public class ContactInformation implements Comparable{
 	@Override
 	public int compareTo(Object o) {
 		ContactInformation contact=(ContactInformation)o;
-		if(this.getSalary()==emp.getSalary())
+		if(this.getMobile()==contact.getMobile())
 		{
 			return 0;
 		}
-		else if ((this.getMobile()>contact.getMobile())) {
+		else if (this.getMobile()>contact.getMobile())
+		{
 			return 1;
 		}
 		else  {
 			return -1;
-		}
-		return 0;
+		
 	}
-	
 
+}
 }
