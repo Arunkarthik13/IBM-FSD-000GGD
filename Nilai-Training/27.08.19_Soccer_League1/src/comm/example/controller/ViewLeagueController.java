@@ -51,10 +51,10 @@ public class ViewLeagueController extends HttpServlet {
 		connection=MyConnectionFactory.getMySqlConnectionForHR();
 		statement=connection.createStatement();
 		rs=statement.executeQuery("select * from league");
-		out.println("<table><tr><td>Id</td><td>Title</td><td>Season</td><td>Year</td><td>Unique Id</td></td>");
+		out.println("<table><tr><td>Title</td><td>Season</td><td>Year</td><td>Unique Id</td></td>");
 		while(rs.next())
 		{
-			out.println("<tr><td>"+rs.getInt(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(2)+
+			out.println("<tr><td>"+rs.getString(2)+
 					"</td><td>"+rs.getString(3)+"</td><td>"+rs.getInt(4));
 		}
 		out.println("</table>");
