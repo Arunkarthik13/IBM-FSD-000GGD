@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\B4ibmjava31\Documents\IBM-FSD-000GGD\Nilai-Training\27.08.19_Soccer_League1"/>
+		<item value="C:\Users\B4ibmjava31\Documents\IBM-FSD-000GGD\Nilai-Training"/>
+	</list>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.project"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.jboss.tools.cdi.ui"/>
+			<item value="org.eclipse.team.cvs.ui.newWizards"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jst.ejb.ui"/>
+			<item value="org.eclipse.buildship.ui.creationwizards"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
+			<item value="org.eclipse.jpt.jaxb"/>
+			<item value="org.jboss.tools.jst.web"/>
+			<item value="org.jboss.tools.jst.web/org.jboss.tools.jsf"/>
+			<item value="org.eclipse.jpt.jpa"/>
+			<item value="org.jboss.tools.common.launcher.ui.category"/>
+			<item value="org.eclipse.m2e"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.jboss.tools.central.ui.wizard.category"/>
+			<item value="org.fusesource.ide.newwizards"/>
+			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.eclipse.wb"/>
+			<item value="org.eclipse.wb/org.eclipse.wb.rcp"/>
+			<item value="org.eclipse.ui.Other"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.jboss.tools.project.examples.category"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.wst.xml.examples"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="C:\Users\B4ibmjava31\Documents\IBM-FSD-000GGD\Nilai-Training"/>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="550"/>
+		<item key="DIALOG_Y_ORIGIN" value="106"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="TOGGLE_SELECTED" value="true"/>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="546"/>
+		<item key="DIALOG_Y_ORIGIN" value="8"/>
+		<item key="DIALOG_WIDTH" value="525"/>
+		<item key="DIALOG_HEIGHT" value="580"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>

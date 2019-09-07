@@ -1,0 +1,5 @@
+package com.luv2code.myapp.entity;
+
+public class InstructorDetail {
+
+}

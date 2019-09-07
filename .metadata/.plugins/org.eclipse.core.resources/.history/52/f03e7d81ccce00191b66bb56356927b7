@@ -1,0 +1,11 @@
+package com.luv2code.myapp.dao;
+
+public class BidirectionalTester {
+
+	public static void main(String[] args) {
+		InstructorDAOImpl service=new InstructorDAOImpl();
+		
+
+	}
+
+}

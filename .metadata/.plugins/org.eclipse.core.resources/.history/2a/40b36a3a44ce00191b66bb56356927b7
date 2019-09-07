@@ -1,0 +1,10 @@
+package com.cdexample;
+import java.io.*;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+@Entity
+@DiscriminatorValue("international_id")
+public class InternationalCD {
+
+}
