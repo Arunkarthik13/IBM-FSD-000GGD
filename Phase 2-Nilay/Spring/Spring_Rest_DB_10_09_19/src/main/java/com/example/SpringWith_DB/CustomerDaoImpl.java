@@ -20,7 +20,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	private Session session;
-
+	
 	@PostConstruct
 	public void init() {
 		session = sessionFactory.openSession();
