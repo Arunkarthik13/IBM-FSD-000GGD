@@ -1,0 +1,10 @@
+server:
+  port: 8052
+spring:
+  application:
+    name: Spring_Micro_Services_16_09_19-client
+  cloud:
+    config:
+      server:
+        uri: http://localhost:8051
+  
