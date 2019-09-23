@@ -9,36 +9,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	<title>Save Product</title>
+	<title>Save Employee</title>
 </head>
 
 <body>
 
 	<div class="container">
 	
-		<h3>product Directory</h3>
+		<h3>Employee Directory</h3>
 		<hr>
 		
 		<p class="h4 mb-4">Save Product</p>
 	
-		<form action="#" th:action="@{/pro/save}"
-						 th:object="${product}" method="POST">
+		<form action="#" th:action="@{/emp/save}"
+						 th:object="${employee}" method="POST">
 		
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" th:field="*{id}" />
 			
 			<input type="text" th:field="*{name}"
-			class="form-control mb-4 col-4" placeholder="name">
+			class="form-control mb-4 col-4" placeholder="name" required="required">
 
-			<input type="number" th:field="*{price}"
-					class="form-control mb-4 col-4" placeholder="price">
+			<input type="text" th:field="*{mobileNumber}"
+					class="form-control mb-4 col-4" placeholder="mobile" required="required">
 
-			
-   <input type="number" th:field="*{quantity}"
-					class="form-control mb-4 col-4" placeholder="quantity">
+			<input type="email" th:field="*{email}"
+					class="form-control mb-4 col-4" placeholder="email">
 		
-							
-			<button type="submit" class="btn btn-info col-2">Add Product</button>
+			<input type="text" th:field="*{skills}" 
+			        class="form-control mb-4 col-4" placeholder="skills">	
+			        			
+			<button type="submit" class="btn btn-info col-2">Save Employee</button>
 						
 		</form>
 	

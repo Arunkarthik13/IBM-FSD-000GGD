@@ -14,11 +14,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/emp")
-public class FiegnController {
+public class EmployeeFiegnController {
     
 	@Autowired
 	private EmployeeInterface employeeInterface;
 	
+	public EmployeeFiegnController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public EmployeeFiegnController(EmployeeInterface employeeInterface) {
+		super();
+		this.employeeInterface = employeeInterface;
+	}
 	@GetMapping("/showForm")
 	public String createUser(Model theModel)
 	{
@@ -30,15 +38,16 @@ public class FiegnController {
 	public String saveEmployee(@ModelAttribute ("employee") EmployeeDto eDto)
 	{
 		employeeInterface.createUser(eDto);
-		return "redirect:/emp/list/";
+		return "redirect:/emp/list";
 	}
 	
 	@GetMapping("/list")
 	public String getAllProducts(Model theModel)
 	{
-	 ResponseEntity<EmployeeDto> list=employeeInterface.getAllEmployees();
+	 List<ResponseEntity<EmployeeDto>> list=employeeInterface.getAllEmployees();
+		
 	 theModel.addAttribute("addemp", list);
-	return "list-employee";
+	  return "list-employee";
 	}
 	
 	@GetMapping("/updateForm")
@@ -76,7 +85,7 @@ public class FiegnController {
 	@GetMapping("/getname")
 	public String getAllByName(Model theModel, @RequestParam("name") String name)
 	{
-		ResponseEntity<EmployeeDto> edto=employeeInterface.getEmployeeByName(name);
+		List<ResponseEntity<EmployeeDto>> edto=employeeInterface.getEmployeeByName(name);
 		theModel.addAttribute("addemp",edto);
 		return "list-employee";
 	}
@@ -84,7 +93,7 @@ public class FiegnController {
 	@GetMapping("/getskills")
 	public String getAllBySkills(Model theModel, @RequestParam("name") String skills)
 	{
-		ResponseEntity<EmployeeDto> edto=employeeInterface.getEmployeeBySkills(skills);
+		List<ResponseEntity<EmployeeDto>> edto=employeeInterface.getEmployeeBySkills(skills);
 		theModel.addAttribute("addemp",edto);
 		return "list-employee";
 	}

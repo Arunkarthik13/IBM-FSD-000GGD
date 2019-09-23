@@ -16,7 +16,7 @@ public interface EmployeeInterface {
  public ResponseEntity<EmployeeDto> createUser(@RequestBody EmployeeDto eDto);
  
  @GetMapping(value="/employee/get")
- public ResponseEntity<EmployeeDto> getAllEmployees();
+ public List<ResponseEntity<EmployeeDto>> getAllEmployees();
  
  @GetMapping(value="/employee/id/{id}")
  public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") int id);
@@ -28,10 +28,10 @@ public interface EmployeeInterface {
  public ResponseEntity<EmployeeDto> getEmployeeByEmail(@PathVariable("email") String email);
  
  @GetMapping(value="/employee/name/{name}")
- public ResponseEntity<EmployeeDto> getEmployeeByName(@PathVariable("name") String name);
+ public List<ResponseEntity<EmployeeDto>> getEmployeeByName(@PathVariable("name") String name);
  
  @GetMapping(value="/employee/skills/{skills}")
- public ResponseEntity<EmployeeDto> getEmployeeBySkills(@PathVariable("skills") String skills);
+ public List<ResponseEntity<EmployeeDto>> getEmployeeBySkills(@PathVariable("skills") String skills);
  
  @GetMapping(value="/products/delete/{id}")
  public boolean deleteById(@PathVariable("id") int id);
