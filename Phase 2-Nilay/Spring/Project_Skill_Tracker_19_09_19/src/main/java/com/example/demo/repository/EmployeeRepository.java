@@ -23,7 +23,8 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer>{
 	
 	public List<Employee> findBySkills(String skills);
 	
-	@Query("SELECT name FROM Employee where name like %:keyword%")
+	@Query( value = "SELECT * FROM Employee where name like %:keyword%", 
+			  nativeQuery = true)	
 	public List<String> search(@Param("keyword") String keyword);
 	
 }

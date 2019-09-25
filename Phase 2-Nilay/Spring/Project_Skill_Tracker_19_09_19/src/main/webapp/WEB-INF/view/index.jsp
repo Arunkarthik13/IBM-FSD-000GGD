@@ -14,17 +14,11 @@
     });  
   });  
   </script>  
-  <script>
-function myFunction() {
-  var x = document.getElementById("fname");
-  x.value = x.value.toUpperCase();
-}
-</script>
 </head>  
 <body>  
 <div class="ui-widget">  
   <label for="Name">Search Name </label>  
-  <input id="Name" onkeyup="myFunction()">  
+  <input id="Name">  
 </div>  
 </body>  
 </html> 
