@@ -1,0 +1,5 @@
+package comm.example.Rest.config;
+
+public class MyInitializerServlet {
+
+}

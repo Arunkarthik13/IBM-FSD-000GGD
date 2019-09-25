@@ -1,0 +1,6 @@
+package com.example.demo.Model_Flights;
+
+@Entity
+public class Passenger {
+
+}

@@ -1,0 +1,47 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+
+@Controller("/produc")
+public class FeignController {
+
+	
+	private ProductServiceClient productServiceClient;
+	
+	@Autowired
+		public FeignController(ProductServiceClient productServiceClient) {
+		super();
+		this.productServiceClient = productServiceClient;
+	}
+	@GetMapping("/showForm")
+	public String create(Model theModel)
+	{
+		ProductDto product=new ProductDto();
+		theModel.addAttribute("product", product);
+		return "products/add-products";
+	}
+	@PostMapping("/save")
+	public String createUser(@ModelAttribute("product") ProductDto theProductDto)
+	{
+		
+		productServiceClient.createUser(theProductDto);
+		return "list-product";
+		
+	}
+	
+	@GetMapping("/fetchproducts")
+	public List<ProductDto> getAllProducts()
+	{
+	 List<ProductDto> list=productServiceClient.getAllProducts();
+	return list;
+	}
+	
+}

@@ -1,0 +1,9 @@
+package com.example.demo.service;
+
+import com.example.demo.shared.ProductDto;
+
+public interface ProductService {
+
+	
+	public ProductDto createUser(ProductDto theProductDto);
+}

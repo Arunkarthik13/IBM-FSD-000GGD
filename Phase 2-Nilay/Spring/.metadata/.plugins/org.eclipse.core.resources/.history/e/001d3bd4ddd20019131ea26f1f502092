@@ -1,0 +1,26 @@
+package comm.example.spring.hibernate.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import comm.example.spring.hibernate.Dao.CustomerDao;
+import comm.example.spring.hibernate.Entity.Customer;
+
+@Service
+public class CustomerServiceDaoImpl implements CustomerServiceDao{
+
+	@Autowired
+	CustomerDao customerdao;
+	public void createCustomer(Customer customer) {
+		customerdao.createCustomer(customer);
+		
+	}
+
+	public List<Customer> getCustomer() {
+		
+		return customerdao.getCustomer();
+	}
+
+}

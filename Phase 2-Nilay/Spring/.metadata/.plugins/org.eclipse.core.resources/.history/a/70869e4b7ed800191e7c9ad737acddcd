@@ -1,0 +1,38 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.UserEntity;
+import com.example.demo.repository.UserRepository;
+
+@Service
+public class UserserviceImpl implements UserService{
+
+	@Autowired
+	private Environment env;
+	
+	 public UserRepository userRepository;
+	 public BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	 
+	 
+	public UserserviceImpl(Environment env, UserRepository userRepository,
+			BCryptPasswordEncoder bCryptPasswordEncoder) {
+		super();
+		this.env = env;
+		this.userRepository = userRepository;
+		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+	}
+
+
+
+	@Override
+	public void createUser(UserEntity theUserEntity) {
+		
+		
+	}
+
+}

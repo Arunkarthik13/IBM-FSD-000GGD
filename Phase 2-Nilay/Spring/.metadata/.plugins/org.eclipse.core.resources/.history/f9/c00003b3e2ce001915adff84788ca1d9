@@ -1,0 +1,9 @@
+package bean;
+
+public class PartTime implements Coach{
+
+	public String getStudentDetail()
+	{
+		return "We are part time students";
+	}
+}

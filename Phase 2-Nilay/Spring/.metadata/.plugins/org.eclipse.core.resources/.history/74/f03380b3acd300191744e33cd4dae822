@@ -1,0 +1,20 @@
+package com.example.SpringWith_DB.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.SpringWith_DB.Customer;
+import com.example.SpringWith_DB.Dao.CustomerDao;
+@Component(value="service")
+public class CustomerServiceImpl {
+	@Autowired
+	private CustomerDao dao;
+
+	public List<Customer> getAllCustomer() {
+		List<Customer> list=dao.getAllCustomer();
+		return list;
+	}
+
+}

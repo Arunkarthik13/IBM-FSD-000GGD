@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Sep 10 17:18:55 IST 2019
+org.eclipse.jst.j2ee.server\:Spring_mvc_05_09_19=E\:\\Java SW\\spring-tool-suite-3.9.9.RELEASE-e4.12.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Spring_mvc_05_09_19
+org.eclipse.jst.j2ee.server\:Spring_Rest_DB_10_09_19=E\:\\Java SW\\spring-tool-suite-3.9.9.RELEASE-e4.12.0-win32-x86_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\Spring_Rest_DB_10_09_19

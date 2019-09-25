@@ -2,7 +2,6 @@ package com.example.demo.dto;
 
 public class RequestModelMapper {
 
-	
 		private String name;
 		private String mobileNumber;
 		private String email;

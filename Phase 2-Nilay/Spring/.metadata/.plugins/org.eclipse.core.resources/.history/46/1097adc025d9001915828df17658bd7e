@@ -1,0 +1,31 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.ProductRepository;
+import com.example.demo.shared.ProductDto;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+
+	private Environment env;
+	private ProductRepository productRepository;
+	
+	@Autowired
+	public ProductServiceImpl(Environment env, ProductRepository productRepository) {
+		super();
+		this.env = env;
+		this.productRepository = productRepository;
+	}
+	
+	@Override
+	public ProductDto createUser(ProductDto theProductDto) {
+		
+		return null;
+	}
+
+
+
+}

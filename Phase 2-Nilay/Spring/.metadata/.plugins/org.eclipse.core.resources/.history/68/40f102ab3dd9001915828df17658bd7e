@@ -1,0 +1,68 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.ProductEntity;
+import com.example.demo.entity.ProductRepository;
+import com.example.demo.shared.ProductDto;
+
+@Service
+public class ProductServiceImpl implements ProductService{
+
+	private Environment env;
+	private ProductRepository productRepository;
+	
+	@Autowired
+	public ProductServiceImpl(Environment env, ProductRepository productRepository) {
+		super();
+		this.env = env;
+		this.productRepository = productRepository;
+	}
+	
+	@Override
+	public ProductDto createUser(ProductDto theProductDto) {
+		
+		ModelMapper mapper=new ModelMapper();
+		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		
+		ProductEntity product=mapper.map(theProductDto,ProductEntity.class);
+		productRepository.save(product);
+		ProductDto pDto=mapper.map(product,ProductDto.class);
+		
+		return pDto;
+		
+	}
+
+	@Override
+	public List<ProductDto> getAllProducts() {
+		List<ProductEntity> list=productRepository.findAll();
+		
+		ModelMapper mapper=new ModelMapper();
+		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+		List<ProductDto> pDto=(List<ProductDto>) mapper.map(list,ProductDto.class);
+		
+		return pDto;
+	}
+
+	@Override
+	public ProductDto getProductById(int id) {
+		
+		return null;
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

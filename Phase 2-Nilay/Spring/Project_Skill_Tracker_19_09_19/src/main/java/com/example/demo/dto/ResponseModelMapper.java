@@ -1,7 +1,7 @@
 package com.example.demo.dto;
 
 public class ResponseModelMapper {
-       
+
 		private String name;
 		private String mobileNumber;
 		private String email;

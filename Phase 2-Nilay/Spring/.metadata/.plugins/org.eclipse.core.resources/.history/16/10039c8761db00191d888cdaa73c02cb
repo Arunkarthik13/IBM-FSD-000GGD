@@ -1,0 +1,60 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+@RequestMapping("/emp")
+public class FiegnController {
+    
+	@Autowired
+	private EmployeeInterface employeeInterface;
+	
+	@GetMapping("/showForm")
+	public String createUser(Model theModel)
+	{
+		EmployeeDto eDto=new EmployeeDto();
+		theModel.addAttribute("employee",eDto);
+		return "add-employee";
+	}
+	@PostMapping("/save")
+	public String saveEmployee(@ModelAttribute ("employee") EmployeeDto eDto)
+	{
+		employeeInterface.createUser(eDto);
+		return "redirect:emp/list/";
+	}
+	
+	@GetMapping("/list")
+	public String getAllProducts(Model theModel)
+	{
+	 List<EmployeeDto> list=employeeInterface.getAllEmployees();
+	 theModel.addAttribute("addemp", list);
+	return "list-employee";
+	}
+	
+	@GetMapping("/updateForm")
+		public String getAllById(Model theModel, @RequestParam("id") int id)
+		{
+			ProductDto pdto=productServiceClient.getProductById(id);
+			theModel.addAttribute("product",pdto);
+			return "add-products";
+		}
+	
+	@GetMapping("/delete")
+	public String deleteById(@RequestParam("id") int id)
+	{
+		productServiceClient.deleteById(id);
+		return "redirect:/pro/fetchproducts/";
+	}
+	
+	
+	
+}

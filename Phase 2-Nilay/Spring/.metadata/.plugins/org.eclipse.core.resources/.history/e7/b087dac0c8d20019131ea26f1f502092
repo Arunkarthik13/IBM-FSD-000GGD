@@ -1,0 +1,19 @@
+package comm.example.spring.hibernate.Service;
+
+import java.util.List;
+
+import comm.example.spring.hibernate.Entity.Customer;
+
+public class CustomerServiceDaoImpl implements CustomerServiceDao{
+
+	public void createCustomer(Customer customer) {
+		
+		
+	}
+
+	public List<Customer> getCustomer() {
+		
+		return null;
+	}
+
+}

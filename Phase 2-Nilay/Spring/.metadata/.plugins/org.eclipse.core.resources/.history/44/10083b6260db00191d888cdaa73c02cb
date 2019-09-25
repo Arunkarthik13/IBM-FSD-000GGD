@@ -1,0 +1,32 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/emp")
+public class FiegnController {
+    
+	@Autowired
+	private EmployeeInterface employeeInterface;
+	
+	@GetMapping("/showForm")
+	public String createUser(Model theModel)
+	{
+		EmployeeDto eDto=new EmployeeDto();
+		theModel.addAttribute("employee",eDto);
+		return "add-employee";
+	}
+	@PostMapping("/save")
+	public String saveEmployee(@ModelAttribute ("employee") EmployeeDto eDto)
+	{
+		employeeInterface.createUser(eDto);
+		return "redirect:emp/list";
+	}
+	
+}

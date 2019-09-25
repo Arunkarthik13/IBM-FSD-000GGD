@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;java&apos; to &apos;Spring_Securiry_Employee_13_09_19&apos;&#x0D;&#x0A;- Original project: &apos;demo&apos;&#x0D;&#x0A;- Destination element: &apos;Spring_Securiry_Employee_13_09_19&apos;&#x0D;&#x0A;- Original element: &apos;demo/src/main/java&apos;" description="Copy source folder" element1="/src\/main\/java" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1568449123864" target="/Spring/Spring_Securiry_Employee_13_09_19" version="1.0"/>
+</session>

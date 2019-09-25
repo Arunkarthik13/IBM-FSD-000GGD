@@ -1,0 +1,5 @@
+package comm.example.Rest.Controller;
+
+public class MyController {
+
+}

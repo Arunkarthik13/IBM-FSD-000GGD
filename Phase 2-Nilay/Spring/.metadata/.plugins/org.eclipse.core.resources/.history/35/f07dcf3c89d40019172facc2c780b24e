@@ -1,0 +1,51 @@
+package com.example.demo.Model_Flights;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
+public class Reservation {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String flight_name;
+    private String passenger_name;
+    private String address;
+	public Reservation() {
+		super();
+	}
+	
+	public Reservation(String flight_name, String passenger_name, String address) {
+		super();
+		this.flight_name = flight_name;
+		this.passenger_name = passenger_name;
+		this.address = address;
+	}
+
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getFlight_name() {
+		return flight_name;
+	}
+	public void setFlight_name(String flight_name) {
+		this.flight_name = flight_name;
+	}
+	public String getPassenger_name() {
+		return passenger_name;
+	}
+	public void setPassenger_name(String passenger_name) {
+		this.passenger_name = passenger_name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+}

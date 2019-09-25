@@ -1,0 +1,8 @@
+server.port=8762
+spring.application.name=zull-server
+zuul.prefix=/api
+zuul.ignored-services=*
+zuul.routes.user-ws.path=/user/**
+zuul.routes.user-ws.service-id=zull-server
+
+

@@ -1,0 +1,16 @@
+package com.example.SpringWith_DB.Service;
+
+import java.util.List;
+
+import com.example.SpringWith_DB.Customer;
+import com.example.SpringWith_DB.Dao.CustomerDao;
+
+public class CustomerServiceImpl {
+	private CustomerDao dao;
+
+	public List<Customer> getAllCustomer() {
+		List<Customer> list=dao.getAllCustomer();
+		return list;
+	}
+
+}

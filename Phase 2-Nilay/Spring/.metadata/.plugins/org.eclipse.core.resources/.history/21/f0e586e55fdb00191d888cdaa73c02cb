@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/emp")
+public class FiegnController {
+    
+	
+	
+	@GetMapping("/showForm")
+	public String createUser(Model theModel)
+	{
+		EmployeeDto eDto=new EmployeeDto();
+		theModel.addAttribute("employee",eDto);
+		return "add-employee";
+	}
+	
+	
+}

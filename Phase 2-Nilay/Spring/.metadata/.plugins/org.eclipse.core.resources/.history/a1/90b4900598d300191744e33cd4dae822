@@ -1,0 +1,10 @@
+package com.example.SpringWith_DB.Service;
+
+public interface CustomerService {
+	
+
+			public List<Customer> getAllCustomer();
+			public void createCustomer(Customer thecustomer);
+
+	}
+

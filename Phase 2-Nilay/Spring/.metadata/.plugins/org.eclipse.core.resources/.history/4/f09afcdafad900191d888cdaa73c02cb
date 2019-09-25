@@ -1,0 +1,59 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhosst:8001
+ 
+      
+      
+server:
+  port: ${PORT:${SERVER_PORT:0}}  
+
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+---
+
+spring:
+  profiles: subjects
+  application:
+    name: subjects
+    
+---
+
+spring:
+  profiles: verb
+  application:
+    name: verb
+    
+---
+
+spring:
+  profiles: article
+  application:
+    name: article
+    
+---
+
+spring:
+  profiles: adjective
+  application:
+    name: adjective
+    
+---
+
+spring:
+  profiles: noun
+  application:
+    name: noun
+    
+---
+   
+spring:
+  profiles: local-test
+  application:
+    name: local
+    
+    
+    
+      

@@ -1,0 +1,5 @@
+package com.example.SpringWith_DB.Config;
+
+public class CustomerConfig {
+
+}

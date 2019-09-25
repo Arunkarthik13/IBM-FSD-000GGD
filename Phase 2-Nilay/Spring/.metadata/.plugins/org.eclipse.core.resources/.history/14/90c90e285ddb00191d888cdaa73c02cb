@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@FeignClient(name = "employee-service")
+public interface EmployeeInterface {
+
+ @PostMapping(value = "/employee/create")
+ public ResponseEntity<EmployeeDto> createUser(@RequestBody ProductDto pDto);
+ 
+ @GetMapping(value="/employee/get")
+ public List<EmployeeDto> getAllProducts();
+ 
+ @GetMapping(value="/products/get/{id}")
+ public ProductDto getProductById(@PathVariable("id") int id);
+ 
+ @GetMapping(value="/products/delete/{id}")
+ public boolean deleteById(@PathVariable("id") int id);
+ 
+}

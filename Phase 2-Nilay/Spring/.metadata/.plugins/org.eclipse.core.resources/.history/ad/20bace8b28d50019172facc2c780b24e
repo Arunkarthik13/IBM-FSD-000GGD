@@ -1,0 +1,53 @@
+package com.example.demo.model;
+
+import javax.persistence.*;
+
+@Entity
+public class Notes {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private String id;
+	private String receipeNotes;
+	
+	@OneToMany(mappedBy="notes")
+	@JoinTable(name = "receipe_notes", joinColumns = @JoinColumn(name = "notes_id"),
+	inverseJoinColumns = @JoinColumn(name = "receipe_id"))
+	private Receipe receipe;
+
+	public Notes() {
+		super();
+	}
+
+	public Notes(String receipeNotes, Receipe receipe) {
+		super();
+		this.receipeNotes = receipeNotes;
+		this.receipe = receipe;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getReceipeNotes() {
+		return receipeNotes;
+	}
+
+	public void setReceipeNotes(String receipeNotes) {
+		this.receipeNotes = receipeNotes;
+	}
+
+	public Receipe getReceipe() {
+		return receipe;
+	}
+
+	public void setReceipe(Receipe receipe) {
+		this.receipe = receipe;
+	}
+	
+	
+}

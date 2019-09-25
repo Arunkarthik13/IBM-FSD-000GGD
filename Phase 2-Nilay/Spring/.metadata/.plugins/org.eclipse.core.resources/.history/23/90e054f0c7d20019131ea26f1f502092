@@ -1,0 +1,5 @@
+package comm.example.spring.hibernate.Service;
+
+public class CustomerService {
+
+}

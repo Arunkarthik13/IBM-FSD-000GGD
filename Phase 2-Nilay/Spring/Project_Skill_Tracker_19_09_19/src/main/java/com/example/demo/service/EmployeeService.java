@@ -22,5 +22,7 @@ public interface EmployeeService {
 	public List<EmployeeDto> searchBySkills(String skills);
 	
 	public void deleteById(int id);
+
+	public List<String> search(String parameter);
 	
 }

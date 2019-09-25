@@ -1,0 +1,8 @@
+package com.example.demo.service;
+
+import com.example.demo.model.UserEntity;
+
+public interface UserService {
+
+	public void createUser(UserEntity theUserEntity);
+}

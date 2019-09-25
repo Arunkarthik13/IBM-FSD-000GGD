@@ -1,0 +1,11 @@
+package com.spring_example1.Spring_04_09_2019;
+import com.spring_example1.Spring_04_09_2019.bean.Address;
+
+public class AddressImpl implements Address {
+
+	public String getAddress() {
+		
+		return "today is your lucky day";
+	}
+
+}

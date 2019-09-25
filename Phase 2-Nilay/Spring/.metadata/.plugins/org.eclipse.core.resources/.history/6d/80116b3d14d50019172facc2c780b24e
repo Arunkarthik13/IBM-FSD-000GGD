@@ -1,0 +1,16 @@
+package com.example.demo.model;
+
+import javax.persistence.*;
+
+@Entity
+public class Notes {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private String id;
+	private String receipeNotes;
+	
+	@OneToOne
+	@JoinColumn(name="receipeId")
+	private Receipe receipe;
+}

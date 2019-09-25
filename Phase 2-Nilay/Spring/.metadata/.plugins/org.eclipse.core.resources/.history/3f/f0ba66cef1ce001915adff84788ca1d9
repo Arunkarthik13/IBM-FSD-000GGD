@@ -1,0 +1,18 @@
+package com.spring_example1.Spring_04_09_2019;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.spring_example1.Spring_04_09_2019.bean.Coach;
+import com.spring_example1.Spring_04_09_2019.bean.Employee;
+import com.spring_example1.Spring_04_09_2019.bean.PartTime;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext1.xml");
+    	Coach myCoach =context.getBean("theEmployee", Employee.class);
+        System.out.println( myCoach.getStudentDetail() );
+    }
+}
+ 

@@ -1,0 +1,65 @@
+package com.example.demo.model;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Data
+@Entity
+public class Incredient {
+
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+private int id;
+private int amount;
+private String description;
+
+@OneToMany
+@JoinColumn(name="receipeId")
+private Receipe receipe;
+
+public Incredient() {
+	super();
+}
+
+public Incredient(int amount, String description, Receipe receipe) {
+	super();
+	this.amount = amount;
+	this.description = description;
+	this.receipe = receipe;
+}
+
+public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public int getAmount() {
+	return amount;
+}
+
+public void setAmount(int amount) {
+	this.amount = amount;
+}
+
+public String getDescription() {
+	return description;
+}
+
+public void setDescription(String description) {
+	this.description = description;
+}
+
+public Receipe getReceipe() {
+	return receipe;
+}
+
+public void setReceipe(Receipe receipe) {
+	this.receipe = receipe;
+}
+
+
+}

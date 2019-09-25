@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\B4ibmjava31\Documents\IBM-FSD-000GGD\Phase 2-Nilay\Spring"/>
+			<item value="C:\Users\B4ibmjava31\Documents\workspace-sts-3.9.9.RELEASE\Spring_mvc_forms_06_09_19\src\main\java\spring_mvcForms\StudentDao.java"/>
+			<item value="C:\Users\B4ibmjava31\Documents\workspace-sts-3.9.9.RELEASE\Spring_Annotation\src\main\java\com\annotation\Spring_Annotation\App_Annotation.java"/>
+			<item value="C:\Users\B4ibmjava31\Documents\IBM-FSD-000GGD\Nilai-Training\19.08.19-Fsd"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.ibm.spring_Rest.Spring_Rest_DB_10_09_19"/>
+			<item value="com.ibm.spring_Rest.Spring_Rest_10_09_19"/>
+			<item value="com.ibm.spring_Rest.Spring_Rest_API_09_09_19"/>
+			<item value="com.ibm.spring_hibernate.SpringWith_hibernate_09_09_19"/>
+			<item value="com.ibm.Spring_mvc_forms_06_09_19"/>
+			<item value="com.ibm.Spring_mvc_05_09_19"/>
+			<item value="com.Jtemplte.Spring_Jtemplate_4_9_19"/>
+			<item value="com.annotation.Annotation"/>
+			<item value="com.spring_example1.Spring_04_09_2019"/>
+		</list>
+		<list key="groupId">
+			<item value="com.ibm.spring_Rest"/>
+			<item value="com.ibm.spring_hibernate"/>
+			<item value="com.ibm"/>
+			<item value="com.Jtemplte"/>
+			<item value="com.annotation"/>
+			<item value="com.spring_example1"/>
+		</list>
+		<list key="artifactId">
+			<item value="Spring_Rest_DB_10_09_19"/>
+			<item value="Spring_Rest_10_09_19"/>
+			<item value="Spring_Rest_API_09_09_19"/>
+			<item value="SpringWith_hibernate_09_09_19"/>
+			<item value="Spring_mvc_forms_06_09_19"/>
+			<item value="Spring_mvc_05_09_19"/>
+			<item value="Spring_Jtemplate_4_9_19"/>
+			<item value="Annotation"/>
+			<item value="Spring_04_09_2019"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

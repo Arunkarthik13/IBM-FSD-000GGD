@@ -1,0 +1,45 @@
+package com.example.SpringWith_DB.Config;
+
+import java.beans.PropertyVetoException;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
+@Configuration
+@EnableWebMvc
+@EnableTransactionManagement
+@ComponentScan(basePackages="com.example.SpringWith_DB")
+public class CustomerConfig implements WebMvcConfigurer{
+
+	@Bean
+	public DataSource datasource()
+	{
+		ComboPooledDataSource datasource=new ComboPooledDataSource();
+		datasource.setUser("root");
+		try {
+			datasource.setDriverClass("com.mysql.cj.jdbc.driver");
+		} catch (PropertyVetoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		datasource.setJdbcUrl("jdbc:mysql://localhost:3306/mydb");
+		datasource.setPassword("root");
+		datasource.setMinPoolSize(10);
+		datasource.setMaxPoolSize(20);
+		datasource.setMaxIdleTime(30000);
+		return datasource();
+		
+	}
+	
+	@Bean
+	public 
+}

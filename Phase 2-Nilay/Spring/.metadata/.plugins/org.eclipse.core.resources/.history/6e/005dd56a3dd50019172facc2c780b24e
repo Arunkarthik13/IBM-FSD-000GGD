@@ -1,0 +1,53 @@
+package com.example.demo.model;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.*;
+
+@Entity
+public class Notes {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int n_id;
+	private String receipeNotes;
+	
+	@OneToMany(mappedBy="notes", cascade=CascadeType.ALL)
+	private Set<Receipe> receipe;
+
+	public Notes() {
+		super();
+	}
+
+	public Notes(String receipeNotes) {
+		super();
+		this.receipeNotes = receipeNotes;
+	}
+
+	public int getId() {
+		return n_id;
+	}
+
+	public void setId(int n_id) {
+		this.n_id = n_id;
+	}
+
+	public String getReceipeNotes() {
+		return receipeNotes;
+	}
+
+	public void setReceipeNotes(String receipeNotes) {
+		this.receipeNotes = receipeNotes;
+	}
+
+	public Set<Receipe> getReceipe() {
+		return receipe;
+	}
+
+	public void setReceipe(Set<Receipe> receipe) {
+		this.receipe = receipe;
+	}
+	
+	
+}

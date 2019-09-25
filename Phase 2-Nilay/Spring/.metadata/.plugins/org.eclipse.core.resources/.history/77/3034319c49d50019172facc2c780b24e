@@ -1,0 +1,24 @@
+package com.example.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.User.UserBuilder;
+
+@Configuration
+@EnableWebSecurity
+public class DemoConfigSecurity extends WebSecurityConfigurerAdapter{
+
+	
+	@Override
+	protected void configure(AuthentcationManagementBuilder auth)throws Exception
+	{ 
+		UserBuilder users=User.withDefaultPasswordEncoder();
+		
+		auth.inMemoryAuthentication()
+		.withUser(users.username("arun"),users.password("arun123"),users.roles("Employee"))
+		.withUser(users.username("karthik"),users.password("karthik123"),users.roles("Employee"))
+		.withUser(users.username("mani"),users.password("mani123"),users.roles("Employee"));
+	}
+}

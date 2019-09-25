@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ProductDto.java&apos; to &apos;Spring_Feign_Client_17_19_19/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original project: &apos;Spring_Feign_Product_Service_17_19_19&apos;&#x0D;&#x0A;- Destination element: &apos;Spring_Feign_Client_17_19_19/src/main/java/com.example.demo&apos;&#x0D;&#x0A;- Original element: &apos;com.example.demo.shared.ProductDto.java&apos;" description="Copy compilation unit" destination="=Spring_Feign_Client_17_19_19/src\/main\/java&lt;com.example.demo" element1="/src\/main\/java&lt;com.example.demo.shared{ProductDto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1568711547530" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,32 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/")
+public class FeignController {
+
+	@Autowired
+	private ProductServiceClient productServiceClient;
+	
+	@PostMapping("/addproducts")
+	public ResponseEntity<?> create(@RequestBody ProductDto pDto)
+	{
+		
+		return ResponseEntity.ok(productServiceClient.createUser(pDto));
+	}
+	
+	@GetMapping("/fetchproducts")
+	public List<ProductDto> getAllProducts()
+	{
+	 List<ProductDto> list=productServiceClient.getAllProducts();
+	return list;
+	}
+	
+}

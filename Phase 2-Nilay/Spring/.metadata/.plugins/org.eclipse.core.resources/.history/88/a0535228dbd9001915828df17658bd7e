@@ -1,0 +1,13 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringConfigServer181919Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringConfigServer181919Application.class, args);
+	}
+
+}

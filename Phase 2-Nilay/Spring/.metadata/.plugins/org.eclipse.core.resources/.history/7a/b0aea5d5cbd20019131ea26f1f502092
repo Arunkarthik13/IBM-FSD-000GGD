@@ -1,0 +1,5 @@
+package comm.example.spring.hibernate.Controller;
+
+public class CustomerController {
+
+}

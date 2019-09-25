@@ -1,0 +1,9 @@
+package com.example.SpringWith_DB.Config;
+
+@Configuration
+@EnableWebMvc
+@EnableTransactionManagement
+@ComponentScan(basePackages="com.example.SpringWith_DB")
+public class CustomerConfig implements WebMvcConfigurer{
+
+}
